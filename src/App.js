@@ -4,21 +4,6 @@ import React from "react";
 import Dropdown from "./Components/Dropdown";
 import { useState } from "react";
 
-// const items = [
-//   {
-//     title: "What is React?",
-//     content: "React is a framework",
-//   },
-//   {
-//     title: "This is the second object",
-//     content: "It is right",
-//   },
-//   {
-//     title: "How do you escape apostrophes?",
-//     content: "You cannot escape apostrophes",
-//   },
-// ];
-
 const options = [
   {
     label: "My name is Peter",
