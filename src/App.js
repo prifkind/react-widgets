@@ -1,27 +1,36 @@
 import React from "react";
 // import Accordion from "./Components/Accordion";
-import Search from "./Components/Search";
+// import Search from "./Components/Search";
+import Dropdown from "./Components/Dropdown";
+import { useState } from "react";
 
-const items = [
+const options = [
   {
-    title: "What is React?",
-    content: "React is a framework",
+    label: "My name is Peter",
+    value: "peter",
   },
   {
-    title: "This is the second object",
-    content: "It is right",
+    label: "My name is Sam",
+    value: "sam",
   },
   {
-    title: "How do you escape apostrophes?",
-    content: "You cannot escape apostrophes",
+    label: "My name is Dave",
+    value: "dave",
   },
 ];
 
 const App = () => {
+  const [selected, setSelected] = useState(options[0]);
+
   return (
     <div>
       {/* <Accordion items={items} /> */}
-      <Search />
+      {/* <Search /> */}
+      <Dropdown
+        options={options}
+        selected={selected}
+        onSelectedChange={setSelected}
+      />
     </div>
   );
 };
